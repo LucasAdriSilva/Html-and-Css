@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com áudio</title>
+</head>
+<body>
+    <h1>Teste áudio</h1>
+
+    <audio src="musica.mp3" controls autoplay></audio>
+
+    <audio preload="auto" controls autoplay loop>
+        <source src="musica.mp3" type="audio/mpeg">
+        <source src="musica.ogg" type="audio/ogg">
+        <source src="musica.way" type="audio/wav">
+        <p>Nao roda áudio</p>
+    </audio>
+    <!-- MP3 Wav ogg-->
+</body>
+</html>
