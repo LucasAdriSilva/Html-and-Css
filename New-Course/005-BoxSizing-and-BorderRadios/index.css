@@ -1,0 +1,22 @@
+#caixa{
+    width: 300px;
+    height: 300px;
+    background-color: #b9c941;
+    padding: 10px;
+    margin: 10px;
+    -moz-border-radius: 10px 20px 100px 200px; 
+    -webkit-border-radius: 10px 20px 100px 200px;
+    border-radius: 10px 20px 100px 200px;
+}
+
+#caixa2{
+    width: 300px;
+    height: 300px;
+    background-color: #b9c941;
+    padding: 50px;
+    margin: 10px;
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    /* preserva a largura e altura alterando o conteudo interno */
+}
