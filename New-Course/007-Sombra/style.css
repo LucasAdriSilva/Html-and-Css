@@ -1,0 +1,14 @@
+#cont{
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+    background: #009670;   
+    box-shadow:15px 15px 10px rgba(0, 0, 0, 0.753); 
+}
+h1{
+    color: white;
+}
+
+#sombra{
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.431);
+}
