@@ -1,0 +1,50 @@
+#caixa {
+    width: 300px;
+    height: 300px;
+    background: rgb(117, 117, 168);
+    padding: 10px;
+}
+
+#caixa:hover {
+    width: 400px;
+    background: rgb(159, 99, 214);
+    /* -webkit-transition: ;
+    -moz-transition: ;
+    -o-transition: ; */
+    /* transition:width 3s, background 3s; */
+    transition: all 3s;
+    transform: rotate(360deg);
+
+}
+
+
+#car {
+    width: 300px;
+    height: 300px;
+    background: red;
+    /* transition-property: width;
+    transition-duration: 2s;
+    transition-timing-function:linear;
+    transition-delay: 1s; */
+
+    transition: width 2s linear 1s;
+}
+
+#car:hover {
+    width: 900px;
+}
+
+
+/* 
+******************************* PROPERTY:
+
+transition:	A shorthand property for setting the four transition properties into a single property
+
+transition-delay:	Specifies a delay (in seconds) for the transition effect
+
+transition-duration:	Specifies how many seconds or milliseconds a transition effect takes to complete
+
+transition-property:	Specifies the name of the CSS property the transition effect is for
+
+
+transition-timing-function:	Specifies the speed curve of the transition effect */
