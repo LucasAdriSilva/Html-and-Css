@@ -18,3 +18,8 @@
 // && Porta E if(x=10 && x % 2)
 // || Porta OU if (x=10 || x=11)
 // ! negação  if(x != 10)
+
+
+
+var resutaldo = <Condição> ? <True> : <Falso> 
+{/* nota >= media ? 'Aprovado' : 'Reprovado' */}
