@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //Escopo: Global, Função, Bloco
+
+        var serie = "Friends"
+        //Bloco
+        if(true){
+            var serie2 = "Gow"
+            document.write(serie)
+        }
+        document.write(serie2)
+
+        document.write('<br/>')
+
+        function x(){
+            document.write(serie)
+            document.write(serie2)
+        }
+
+        x()
+
+        // Váriaveis presente dentro da função não é acessivel pelo o bloco  global, mas váriaveis dentro do bloco pode ser ultilizado por todos
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

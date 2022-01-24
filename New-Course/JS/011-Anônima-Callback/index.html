@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         var exibirSaudação = function(nome){
+            document.write('Olá '+ nome +', tudo bem?')
+        }
+        exibirSaudação('Jorge')
+
+
+        //Callabck
+
+        function exibirArtigo(id, callbackSucesso, callbackErro){
+            //lógica: recuperar oid via requisição HTTP
+            if(true){
+                callbackSucesso('Função de callback', 'As funções.....')
+            } else{
+                callbackErro('Erro ao recuperar os dados')
+            }
+        }
+
+        //exibirArtigo(1, function(){...}, function(){...} )
+
+        var callbackSucesso = function(titulo, descricao){
+            document.write('<h1>' + titulo + '</h1>')
+            document.write('<hr/>')
+            document.write('<p>' + descricao + '</p>')
+        }
+
+        var callbackErro = function(erro){
+            document.write('<p> <b>Erro:</b> ' + erro + '</p>')
+        }
+    
+        exibirArtigo(1, callbackSucesso, callbackErro )
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
