@@ -1,0 +1,7 @@
+body{
+    background-color: rgb(210, 243, 177);
+    font-size: 4rem;
+    display: flex;
+    flex-direction: row;
+    
+}
