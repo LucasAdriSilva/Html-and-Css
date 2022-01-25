@@ -41,8 +41,54 @@
         document.write(Math.random(x)*100+ '</br>')
         document.write(y + '</br>')
         document.write(z + '</br>')
+        document.write('</br> </br> </br>')
+
+        //----------------------------------------------------Funções PAra manipular data
         
 
+        var data = new Date()
+
+        document.write(data.getDate() + ' </br>')
+        document.write((data.getMonth()+1) + ' </br>')
+        document.write(data.getFullYear() + ' </br></br></br>')
+
+        //Adicionar ou remover dias
+        document.write(data.toString()+ ' </br>')
+        data.setDate(data.getDate() + 1 )
+        document.write('<hr>')
+        document.write(data.toString()+ ' </br></br>')
+        
+        // Adicioanndo e removendo meses
+        document.write(data.toString()+ ' </br>')
+        data.setMonth(data.getMonth() +5 )
+        document.write('<hr>')
+        document.write(data.toString()+ ' </br></br>')
+
+        // Adicioanndo e removendo anos
+        document.write(data.toString()+ ' </br>')
+        data.setFullYear(data.getFullYear() +5 )
+        document.write('<hr>')
+        document.write(data.toString()+ ' </br></br></br>')
+
+
+        var data1 = new Date(2015,2,15)
+        var data2 = new Date(2016,1,20)
+
+        document.write(data1.toString() +' -- | -- '+ data2.toString() +'</br></br></br>')
+
+        document.write(data1.getTime())
+        document.write('<hr/>')
+        document.write(data2.getTime())
+        document.write('<hr/>')
+
+        var x = Math.abs(data1.getTime() - data2.getTime())
+        document.write(Math.abs(data1.getTime() - data2.getTime()))
+        document.write('<hr/>')
+
+        var y = (1*24*60*60*1000)
+        document.write('Um dia tem: '+ (1*24*60*60*1000) + ' milisegundos <br/>')
+        document.write('<hr/>')
+        document.write('O resultado de dias é: ' +Math.ceil(x/y))
 
 
     </script>
