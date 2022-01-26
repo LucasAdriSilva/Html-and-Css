@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .estilo1{background-color: brown; color: white;}
+        .estilo2{
+            background-color: rgb(0, 0, 0); 
+            color: rgb(250, 250, 250);
+            text-align: center;
+            width: 400px;
+            height: 90px;
+            padding: 25px;
+        }
+    </style>
+
+    <script>
+       function modclass(){
+           document.getElementById('mesagem').className = 'estilo2'
+       }
+    </script>
+
+</head>
+<body>
+    
+    <div id="mesagem" class="estilo1" style=" width: 500px; height: 100px;"> Modificando a classe elemento </div>
+    <hr/>
+    <button type="button" onclick="modclass()">Aplicar classe</button>
+
+    
+</body>
+</html>

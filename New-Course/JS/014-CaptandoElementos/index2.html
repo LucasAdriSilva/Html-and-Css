@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function dis(){
+            var caracter = document.getElementById('entrada').value
+            document.getElementById('entrada').value = ''
+            console.log(caracter)
+            
+            caracter.trim() //limpando espaços em branco
+            switch(caracter){
+                case '0':
+                case '1':
+                case '2':
+                case '3':
+                case '4':
+                case '5':
+                case '6':
+                case '7':
+                case '8':
+                case '9':
+                document.getElementById('_letras').value = caracter
+                break;
+                default:
+                document.getElementById('_numeros').value = caracter
+            }
+        }
+             
+    </script>
+</head>
+<body>
+
+
+    <input type="text" placeholder="Digite o caracter aqui" onkeyup="dis()" id="entrada">
+
+    <hr/>
+
+    <span>Letras</span>
+    <input type="text" placeholder="Digite aqui" disabled id="_letras">
+
+    <hr/>
+
+    <span>Números</span>
+    <input type="text" placeholder="Digite aqui" disabled id="_numeros">
+</body>
+
+
+
+</html>

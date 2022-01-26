@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       function modstyle(cordefundo, l, a){
+           document.getElementById('quad').style.background = cordefundo
+           document.getElementById('quad').style.width = l
+           document.getElementById('quad').style.height = a
+       }
+    </script>
+</head>
+<body>
+    <h1>Manipulando estilos</h1>
+
+    <button type="button" onclick="modstyle('#ff0000', '200px', '200px')"> Vermelho</button>
+    <button type="button" onclick="modstyle('#00ff00', '300px', '300px')"> Verde </button>
+    <button type="button" onclick="modstyle('#0000ff', '50px', '50px')"> Azul </button>
+    <hr/>
+    <div style="border: solid 1px black; width: 100px; height: 100px;" id="quad" > </div>
+
+</body>
+</html>
