@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function foc(){
+           document.getElementById('tr').style.background = "#ffff03"
+            
+            
+        }
+
+        function semfocus(){
+           var caracter = document.getElementById('tr').value
+            if (caracter.length <= 2){
+                 document.getElementById('tr').style.background = '#FF0000'
+             }else {
+                document.getElementById('tr').style.background = '#32CD32'
+             }
+             
+             
+        }
+    </script>
+</head>
+<body>
+    <input id="tr" type="text" onfocus="foc()" onblur="semfocus()">
+</body>
+</html>
