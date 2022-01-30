@@ -1,28 +1,29 @@
-body{
+body {
     display: flex;
     justify-content: center;
     margin-top: 15px;
-    }
+}
 
-#calculadora{
+#calculadora {
     background-color: rgba(235, 111, 152, 0.733);
     width: 400px;
     height: 450px;
     display: flex;
     flex-direction: column;
-    text-align: center;  
-    border-radius:25px;  
+    text-align: center;
+    border-radius: 25px;
     display: flex;
-    border: solid 1px rgba(231, 64, 120, 0.733);    
+    border: solid 1px rgba(231, 64, 120, 0.733);
     box-shadow: 15px 15px 12px rgba(0, 0, 0, 0.411);
 }
 
-#tela1{
-    padding: 20px ;      
+#tela1 {
+    padding: 20px;
 }
-#tela{
+
+#tela {
     background-color: white;
-    
+
     border-radius: 8px;
     width: 300px;
     height: 50px;
@@ -31,45 +32,43 @@ body{
 
 }
 
-
-#line{
+#line {
     display: block;
     padding-top: 5px;
-    
+
 }
 
-.button{
+.button {
     width: 80px;
     height: 60px;
     border-radius: 5px;
     font-size: 1.4rem;
-    margin: 1px ;
+    margin: 1px;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.411);
-    
+
 }
 
-.button12{
+.button12 {
     width: 165px;
     height: 60px;
     border-radius: 5px;
     font-size: 1.4rem;
     margin-top: 1px;
-    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.411);    
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.411);
 }
 
-
-#linex{
+#linex {
     display: block;
-    padding-top: 1px;    
+    padding-top: 1px;
 }
 
-#rodape{
+#rodape {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.igual{
+.igual {
     width: 80px;
     height: 124px;
     border-radius: 5px;
@@ -77,7 +76,6 @@ body{
     margin-top: 5px;
 }
 
-#separ{
+#separ {
     margin-right: 5px;
 }
-
