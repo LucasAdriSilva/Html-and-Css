@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For</title>
+    <script>
+        var lista_frutas = []
+        lista_frutas[0] = 'Banana'
+        lista_frutas[1] = 'Maça'
+        lista_frutas[2] = 'kiwi'
+        lista_frutas[3] = 'Coco'
+
+        console.log(lista_frutas.length)
+
+        var y = 0
+
+        while (y < lista_frutas.length) {
+            document.write(lista_frutas[y] + '<br/>')
+
+
+            y++
+        }
+        document.write('________________________________________________________________________')
+
+        /*------------------------------------------Loop encadeado------------------------------------------*/
+
+        for (var y = 1; y <= 10; y++) {
+
+            for (var x = 1; x <= 10; x++) {
+                document.write(y + ' x ' + x + ' = ' + (y * x) + '<br/>')
+            }
+            document.write('<hr/>')
+        }
+
+        
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
