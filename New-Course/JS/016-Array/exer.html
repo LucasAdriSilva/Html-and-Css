@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando Array</title>
+</head>
+<script>
+    var obetos = ['Cadeira', 'Impressora', 'Garfo']
+
+    function adicionar() {
+        var input = document.getElementById('tex').value
+
+        if (input === null) {
+            alert('Informe um valor válido"')
+            console.log(input)
+        } else {
+            if (obetos.indexOf(input) === -1) {
+                obetos.push(input)
+                console.log(obetos)
+                
+            } else {
+                alert('Objeto já foi adicionado')
+            }
+        }
+        document.getElementById('tex').value = ''      
+    }
+
+    function ordenar() {
+        obetos.sort()
+        console.log(obetos)
+    }
+
+</script>
+
+<body>
+
+    <input type="text" id="tex">
+    <button onclick="adicionar()">Adicionar</button>
+    <button onclick="ordenar()">Ordenar</button>
+</body>
+
+</html>
