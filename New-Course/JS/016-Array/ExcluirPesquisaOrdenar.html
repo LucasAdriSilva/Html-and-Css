@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*--------------------Excluir----------------------*/
+        var heroi = []
+
+        heroi['int'] = []
+        heroi['agi'] = []
+        heroi['str'] = []
+
+
+        heroi['int'][0] = 'Zeus'
+
+        heroi['int'].push('Dazzle') // Adiciona no final do Array
+        heroi['int'].unshift('Invoker') // Adiciona no inicio do Array
+
+        heroi['int'].pop() // Exclui o primeiro termo do Array
+        heroi['int'].shift() // Exclui o ultimo termo do Array
+        console.log(heroi)
+
+
+
+        /* ----------------------PESQUISA--------------------*/
+
+        console.log(heroi['int'].indexOf('Zeus')) //Mostra em qual posição dentro do Array se não existir valor será -1
+
+        if(heroi['int'].indexOf('Zeus') === -1){
+            console.log('Não have')            
+        } else{
+            console.log('O heroi ' + heroi['int'][0] + ' existe')
+        }
+
+        /*-------------------------Ordenação------------------------------*/
+
+        // heroi['int'][0] = 'Zeus'
+        heroi['int'][1] = 'Crystal'
+        heroi['int'][2] = 'Sky'
+        heroi['int'][3] = 'Anciente'
+        
+        console.log(heroi['int'])
+        console.log(heroi['int'].sort()) // Sort() ordenar em ordem alfabetica escrito
+
+        var lis_numeros = []
+        lis_numeros[1] = 456
+        lis_numeros[2] = 47
+        lis_numeros[3] = 589
+        lis_numeros[4] = 14
+        lis_numeros[5] = 35
+        console.log(lis_numeros.sort(ordenaNum)) //Ordernar numeral precisa de uma function
+        
+        function ordenaNum(a, b){
+            return a - b
+        }
+
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
