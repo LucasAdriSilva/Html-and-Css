@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function abrirPop() {
+            var wind = window.open('http://google.com.br', 'Nova Janela', "width=300,height=150")
+        }
+
+        function fecharPop() {
+            window.close(wind)
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+    <button onclick="abrirPop()">Abrir Janela</button>
+    <button onclick="fecharPop()">Fechar Janela</button>
+    <button onclick="window.print()">Imprimir pagina</button>
+</body>
+
+</html>
