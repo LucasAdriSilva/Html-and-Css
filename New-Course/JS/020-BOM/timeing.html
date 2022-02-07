@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // setTimeout(function(){document.write('Inicio ')}, 2000)
+        // clearTimeout()
+
+        // setInterval(function(){document.write('Teste <br/>')}, 3000)
+        // clearInterval()
+
+        var i = 5
+
+        var x = setInterval(function(){ 
+            document.write(i) 
+            i--
+            if(i === 0 ){
+                // window.location.reload()
+                clearInterval(x)
+            }
+        }
+            ,1000)
+    </script>
+
+    <style>
+        body{
+            font-size: 3rem;
+            background-color: rgb(89, 89, 167);
+        }
+    </style>
+</head>
+
+<body>
+  
+</body>
+
+</html>
