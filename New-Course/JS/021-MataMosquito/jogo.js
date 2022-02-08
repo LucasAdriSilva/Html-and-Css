@@ -3,6 +3,20 @@ var largura = 0
 var altura = 0
 var vida = 1
 var tempo = 10
+var nivel = window.location.search.replace('?', '')
+var tempoDoGame = 0
+
+
+if(nivel == 'normal'){
+    //1500
+ tempoDoGame = 1500
+}else if(nivel == 'dificil'){
+    //1000
+    tempoDoGame = 1000
+}else if(nivel == 'muitoDificil'){
+    //750
+    tempoDoGame = 750
+}
 
 function telaTamanho() {
     largura = window.innerWidth
@@ -14,7 +28,7 @@ telaTamanho()
 
 // Cronometro
 
-var cronometro = setInterval(() => {
+var cronometro = setInterval(function() {
     tempo -= 1
     if(tempo < 0){
         clearInterval(cronometro)
@@ -24,7 +38,7 @@ var cronometro = setInterval(() => {
         document.getElementById('temp').innerHTML = tempo
     }
     
-}, 1000);
+}, 2000);
 //Finish
 
 function posicaoRandom() {
