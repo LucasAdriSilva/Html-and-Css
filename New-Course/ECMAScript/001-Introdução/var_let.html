@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // 3 escopos global ,functiom, bloco
+        // let ele se mantem no bloco onde se encontra
+        // var ele pode ser acessado de acordo com sua ultilização dentro de if o global consegue puchar, dentro de função o global não puxa
+
+        
+        function x(){ 
+            let serie = 'asd' 
+            console.log(serie)
+              
+            if(true){
+             let serie = 'vish' 
+             console.log(serie)  
+            }
+        }
+        x()
+
+        if(true){
+            let serie = 'viqwesh'   
+            console.log(serie)
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
