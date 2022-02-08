@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jogo.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onresize="telaTamanho()">
+    <div class="painel">
+        <div class="vida">
+             <img id="v1" src="assest/coracao_cheio.png">
+             <img id="v2" src="assest/coracao_cheio.png">
+             <img id="v3" src="assest/coracao_cheio.png">
+        </div>
+        <div class="crono"> Tempo Restante: <span id="temp"></span></div>
+    </div>
+    
+    <script> 
+        document.getElementById('temp').innerHTML = tempo   
+        var criamosca = setInterval(function(){
+            posicaoRandom()
+        }, 1000)
+    </script>
+</body>
+</html>

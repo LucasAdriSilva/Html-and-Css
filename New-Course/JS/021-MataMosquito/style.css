@@ -1,0 +1,53 @@
+body{
+    background-image: url(assest/bg.jpg);
+    background-repeat: no-repeat;
+}
+
+.mosquito1{
+    width: 50px;
+    height: 50px;
+}
+
+.mosquito2{
+    width: 80px;
+    height: 80px;
+}
+
+.mosquito3{
+    width: 100px;
+    height: 100px;
+}
+
+.mosquito4{
+    width: 30px;
+    height: 30px;
+}
+
+.ladoA{
+    transform: scaleX(1);
+}
+
+.ladoB{
+    transform: scaleX(-1);
+}
+
+.painel{
+    position: absolute;
+    width: 200px;    
+    padding: 10px;
+    bottom: 0px;
+    border-top: 1px white;
+    background-color: #fff;
+    opacity: 0.7;
+    left: 0px;
+}
+
+.vida{
+    float: left;
+}
+
+.crono{
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+}
