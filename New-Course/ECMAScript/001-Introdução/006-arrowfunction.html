@@ -12,11 +12,24 @@
     //       return x * x
     //   }
 
-      let quadrado = (x = 2) => {
-        return x * x
-      }
+    //   let quadrado = (x)  => {
+    //     return x * x
+    //   }
+    // let quadrado = x  => x * x // return inplicito
+    
 
-      document.write( quadrado(7) )
+    //   document.write( quadrado(7) )
+
+    // let parOuImpar = x => {
+    //     if(x % 2 === 0){
+    //         return 'Par'
+    //     }
+    //     return 'Impar'
+    // }
+
+    let parOuImpar = x => x % 2 === 0 ? 'Par' : 'Impar' //Return inplicito
+       
+    document.write(parOuImpar(8))
     
     </script>
 </head>
