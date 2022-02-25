@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //Procedural
+        // let cadeiras = Array()
+
+        // cadeiras[0] = Array()
+        // cadeiras[0]['qtd_pernas'] = 4
+        // cadeiras[0]['giratoria'] = false
+        // cadeiras[0]['cor'] = 'azul'
+        
+        // cadeiras[1] = Array()
+        // cadeiras[1]['qtd_pernas'] = 1
+        // cadeiras[1]['giratoria'] = true
+        // cadeiras[1]['cor'] = 'vermelho'
+
+        // function girar_cadeira(indice){
+        //     if(cadeiras[indice]['giratoria'] === true){
+        //         document.write('Girou')
+        //     }else{
+        //         document.write('Não é giratoria')
+        //     }
+        // }
+        // function add_cadeira(qtd_pernas, giratoria, cor){
+        //     let cadeira = Array()
+        //     cadeira['qtd_pernas'] = qtd_pernas
+        //     cadeira['giratoria'] = giratoria
+        //     cadeira['cor'] = cor
+        //     cadeiras.push(cadeira)
+        // }
+
+        // add_cadeira(1, true, 'rosa')
+
+        // console.log(cadeiras)
+
+        // girar_cadeira(1)
+
+
+
+        //Orientado a Objeto
+
+        class cadeira{
+            constructor(pernas, giras, cors){
+                this.perna = pernas
+                this.gira = giras
+                this.cor = cors
+            }
+
+            girarCadeira(){
+                if(this.gira === true){
+                    document.write('Girou')
+                }else{
+                    document.write('Não Girou')
+                }
+            }
+        }
+
+        let cadeiras = Array()
+        cadeiras.push(new cadeira(1, true, 'roxa'))
+        cadeiras.push(new cadeira(6, true, 'Branca'))
+
+        console.log(cadeiras)
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

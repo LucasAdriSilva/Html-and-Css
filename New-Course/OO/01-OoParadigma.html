@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //procedural 
+
+
+
+        //OO Modelo de Objeto
+        class ContaBancaria {
+            // constructor(agencia = 0001, numeroconta = 351735, saldo = 5, limte = 1000) {
+            //     this.agencia = agencia
+            //     this.numeroConta = numeroconta
+            //     this.saldo = saldo
+            //     this.limite = limte
+            // }
+
+            constructor() {
+                this.agencia = 1
+                this.numeroConta = 859674
+                this.saldo = 500
+                this.limite = 15000
+            }
+
+            deposita(valorDeposito) {
+                this.saldo += valorDeposito
+            }
+
+            sacar(valorSaque) {
+                this.saldo -= valorSaque
+            }
+
+            consultarSaldo() {
+                return this.saldo
+            }
+        }
+
+        let conta1 = new ContaBancaria()
+        console.log(conta1.consultarSaldo()) 
+
+        conta1.deposita(6000)
+        console.log(`Depois do saque ficou: ${conta1.consultarSaldo()}`) 
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
