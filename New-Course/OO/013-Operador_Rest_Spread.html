@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //contexto Spread
+        let tituloArtigo = 'Com ultilizar operador spread'
+        console.log(tituloArtigo)
+        console.log(...tituloArtigo)
+        console.log([...tituloArtigo])
+
+        let listaCursos1 = ['Nodejs e MongoDB', 'ES6, TypeScript e Angular 4']
+
+        let listaCurso2 = ['JS', 'Gnhu/LINUX']
+        let listaCursoCompleto = [...listaCurso2, 'Web completo', 'Andoid completo', , ...listaCursos1]
+
+        console.log(listaCursoCompleto)
+
+        //Obj
+
+        let pessoa = { Nome: 'João', idade: 27 }
+        let clone = { end: 'Rua abc', ...pessoa }
+
+        console.log(clone)
+        console.log('------------------------------------------')
+
+        //REST--------------------------------------------------
+
+        function soma(...param) {
+            let res = 0
+
+            param.forEach(v => res += v)
+            return res
+        }
+
+        console.log(soma(3, 8, 5, 7))
+
+        function multi(m, ...p){
+            let res = 0 
+            p.forEach(v => res += m * v)
+            return res
+        }
+        console.log(multi(5,6,8,25))
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
