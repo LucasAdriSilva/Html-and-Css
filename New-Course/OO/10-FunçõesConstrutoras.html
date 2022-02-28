@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let Carro = function () {
+            this.cor = 'Branco'
+            this.modelo = 'Chevet'
+            this.velocidadeAtual = 0
+            this.velocidadeMax = 180
+            
+            this.acelerar = function () {
+                // this.velocidadeAtual += 10
+                let velocidade = this.getVelocidadeAtual() + 10
+                this.setVelocidadeAtual(velocidade)
+            }
+            this.getVelocidadeAtual = function () {
+                return this.velocidadeAtual
+            }
+            this.setVelocidadeAtual = function (velocidadeAtual) {
+                this.velocidadeAtual = velocidadeAtual
+            }
+        }
+
+        let carro = new Carro()
+        carro.acelerar()
+        carro.setVelocidadeAtual(150)
+        console.log(carro.velocidadeAtual)
+        console.log('-------------------------------------------------')
+        //-------------------------------------------ECAMPSULANDO
+
+        // let Carro2 = function(){
+        //     this.cor = 'Branco'
+        //     this.modelo = 'Chevet'
+        //     this.velocidadeAtual = 0
+        //     this.velocidadeMax = 180
+        //     this.acelerar = function(){
+        //         // this.velocidadeAtual += 10
+        //         let velocidade = this.getVelocidadeAtual() + 50
+        //         if (velocidade > this.velocidadeMax){
+        //             velocidade = this.velocidadeMax
+        //         }
+        //         this.setVelocidadeAtual(velocidade)    
+        //     }
+
+        //     this.getVelocidadeAtual = function(){
+        //         return this.velocidadeAtual
+        //     }
+        //     this.setVelocidadeAtual = function(velocidadeAtual){
+        //         this.velocidadeAtual = velocidadeAtual
+        //     }
+        // }
+
+        let Carro2 = function () {
+            this.cor = 'Branco'
+            this.modelo = 'Chevet'
+            this.velocidadeAtual = 0
+            var velocidadeMax = 180
+            var quilometroRodados = 0
+           
+            this.acelerar = function () {
+                // this.velocidadeAtual += 10
+                let velocidade = this.getVelocidadeAtual() + 50
+                if (velocidade > velocidadeMax) {
+                    velocidade = velocidadeMax
+                }
+                this.setVelocidadeAtual(velocidade)
+                setQuilometroRodado(0.06)
+                console.log(quilometroRodados)
+            }
+            
+            this.getVelocidadeAtual = function () {
+                return this.velocidadeAtual
+            }
+            
+            this.setVelocidadeAtual = function (velocidadeAtual) {
+
+                this.velocidadeAtual = velocidadeAtual
+            }
+            
+            var setQuilometroRodado = function (q) {
+                quilometroRodados += q
+            }
+        }
+
+        let veiculo = new Carro2()
+        console.log(veiculo.velocidadeAtual)
+        veiculo.acelerar()
+        console.log(veiculo.velocidadeAtual)
+        veiculo.acelerar()
+        console.log(veiculo.velocidadeAtual)
+        veiculo.acelerar()
+        console.log(veiculo.velocidadeAtual)
+        veiculo.acelerar()
+        veiculo.velocidadeMax = 250
+        console.log(veiculo.velocidadeAtual)
+        veiculo.acelerar()
+        console.log(veiculo.velocidadeAtual)
+        veiculo.acelerar()
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
