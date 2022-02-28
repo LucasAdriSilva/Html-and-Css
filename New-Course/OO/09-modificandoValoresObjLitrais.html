@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let pessoa = {
+            nome: 'José',
+            idade: 25
+        }
+
+        console.log(pessoa.nome)
+        pessoa.nome = 'Carlos'
+        pessoa.idade = 50
+        console.log(pessoa.nome)
+        console.log(pessoa.idade)
+
+        //INCLUINDOOOO ---------------
+        pessoa.sexo = 'Masculino'
+
+        console.log(pessoa)
+
+        pessoa.dizerOi = () => console.log('OLAAAA')
+
+        pessoa.dizerOi()
+
+        // ------ OBJ LITERAL ÚNICO
+
+        let assinatura ={
+            idCliente: 002,
+            descrisao: 'Internet',
+            Status(){
+                console.log('Ativo')
+            }
+        }
+
+        console.log(assinatura.descrisao)
+
+        let y = assinatura
+
+        console.log(y.descrisao)
+
+        y.descrisao = 'Internet + TV + Telefone'
+        console.log(assinatura.descrisao)
+        console.log(y.descrisao)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
