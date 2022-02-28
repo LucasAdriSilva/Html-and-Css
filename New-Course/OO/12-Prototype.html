@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let a1 = {
+            cor: 'Branca',
+            modelo: 'Airbus a380',
+            levantarVoo() { console.log('Decolando') }
+        }
+        // function Construtora------------------------------------------------
+        let AviaoF = function () {
+            this.cor = 'Branca',
+                this.modelo = 'Air 360',
+                this.levantarVoo = function () { console.log('Decolando') }
+        }
+
+        let a2 = new AviaoF()
+        // Class --------------------------------------------------------------
+        class AviaoC {
+            constructor() {
+                this.cor = 'Rosa',
+                    this.modelo = 'Jato'
+            }
+            levantarVoo() {
+                console.log('Decolando')
+            }
+        }
+        let a3 = new AviaoC()
+
+        console.log(a1)
+        console.log(a2)
+        console.log(a3)
+        console.log('----------------------------------------------')
+
+
+        //---------------------------------------------------------
+
+        Object.prototype.attr50 = 'z'
+
+        let animal = {attr1: 'a'}
+        let vertebrado = {attr2: 'b', __proto__: animal}
+        let ave = {__proto__:vertebrado, attr3: 'c', attr2: 'x'}
+
+        console.log(ave.attr2, ave.attr1, ave.attr3, ave.attr50)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
