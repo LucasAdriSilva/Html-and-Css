@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Destructuring1 ----------------------------------------------------
+        // let frutas = ['Abacaxi', 'Uva', 'Mamão', 'Pera']
+        // let [ a,b, ,c ] = frutas // Pular indice
+        // let [a, b, c, d, e = 'Coco'] = frutas
+
+        // console.log(a, b, c, d, e)
+
+        // let coisas = [
+        //     ['Abacaxi', 'Uva', 'Mamão', 'Pera'],
+        //     ['José', 'Maria']
+        // ]
+
+        // let [, [, n2]] = coisas
+
+        // let [[, , n1,]] = coisas
+
+
+        // console.log(n2)
+        // console.log(n1)
+        // Destructuring1 ----------------------------------------------------
+
+        // Destructuring2 ----------------------------------------------------
+
+        // let produto = {
+        //     descricao: 'Nootbook',
+        //     preco: 1800,
+        //     detalhes: {
+        //         fabricante: 'abc',
+        //         modelo: undefined
+        //     }
+        // }
+        // array =>[]  obj => {}
+
+        // let {descricao, preco} = produto
+        // let { descricao: da, preco: de = 0, desconto = 5 } = produto
+
+        // let { detalhes: { fabricante: di, modelo: du = 'Não encontrado' } } = produto
+
+        // console.log(da, de, desconto)
+        // console.log(di, du)
+        // console.log('-------------------------------------------')
+        // //Destructuring2 ----------------------------------------------------
+
+        // Destructuring3 ----------------------------------------------------
+        // array
+
+        //  let arr = [10,20,30,40]
+
+        //  function teste([a, b, ,c, d = 100]){
+        //      console.log(a,b,c)
+
+        //  }
+
+        // let obj = {
+        //     a: 10,
+        //     b: 20,
+        //     c: 30,
+        //     d: 40,
+        // }
+
+        // function teste({ a: x, b, c, z = 10 }) {
+        //     console.log(x, b, c, z)
+        // }
+
+        // teste(obj)
+        //Destructuring3 ----------------------------------------------------
+
+        //Destructuring4 ----------------------------------------------------
+        
+        let arr = [10,20,30,40]
+        let [x , ...resto] = arr
+
+        console.log(resto)
+        console.log(x)
+        console.log('-----------------------------------')
+
+
+        let obj ={
+            a: 10,
+            b: 20,
+            c: 30,
+            d: 40,
+        }
+
+        let {a, ...z} = obj
+
+        console.log(resto)
+        console.log(a)
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
