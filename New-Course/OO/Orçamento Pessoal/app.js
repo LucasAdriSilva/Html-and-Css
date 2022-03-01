@@ -90,6 +90,15 @@ function cadastrarDespesa() {
 		document.getElementById('modal_btn').innerHTML = 'Voltar'
 
 		$('#modalRegistraDespesa').modal('show')
+		
+		//Zerando os campos
+		ano.value = ''
+		mes.value = ''
+		dia.value = ''
+		tipo.value = ''
+		descricao.value = ''
+		valor.value = ''
+
 	} else {
 
 		document.getElementById('modal_conteudo').innerHTML = 'Está faltando um ou mais elementos para efetuar o registro'
