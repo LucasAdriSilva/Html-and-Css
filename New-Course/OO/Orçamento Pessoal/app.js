@@ -1,5 +1,6 @@
 class Despesa {
 	constructor(ano, mes, dia, tipo, descricao, valor) {
+
 		this.ano = ano
 		this.mes = mes
 		this.dia = dia
@@ -111,7 +112,9 @@ function cadastrarDespesa() {
 		descricao.value,
 		valor.value
 	)
-	if (despesa.validarDados() === true) {
+
+
+	if (despesa.validarDados() === true && despesa.dia < 31) {
 		bd.gravar(despesa)
 
 		document.getElementById('modal_conteudo').innerHTML = 'Despesa salva com sucesso!'
@@ -131,14 +134,24 @@ function cadastrarDespesa() {
 		valor.value = ''
 
 	} else {
+		
+		if (despesa.dia > 31) {
+			document.getElementById('modal_conteudo').innerHTML = 'Valor do campo DIA'
+			document.getElementById('modal_titulo').innerHTML = `Seu mês tem ${despesa.dia}??????? Então volta e arruma`
+			document.getElementById('modal_tituloDiv').className = 'modal-header text-danger'
+			document.getElementById('modal_btn').className = 'btn btn-danger'
+			document.getElementById('modal_btn').innerHTML = 'CORRIGIR ESSA CARALHA'
 
-		document.getElementById('modal_conteudo').innerHTML = 'Está faltando um ou mais elementos para efetuar o registro'
-		document.getElementById('modal_titulo').innerHTML = 'Erro na inclusão do registro'
-		document.getElementById('modal_tituloDiv').className = 'modal-header text-danger'
-		document.getElementById('modal_btn').className = 'btn btn-danger'
-		document.getElementById('modal_btn').innerHTML = 'Voltar e corrigir'
+			$('#modalRegistraDespesa').modal('show')
+		} else {
+			document.getElementById('modal_conteudo').innerHTML = 'Está faltando um ou mais elementos para efetuar o registro'
+			document.getElementById('modal_titulo').innerHTML = 'Erro na inclusão do registro'
+			document.getElementById('modal_tituloDiv').className = 'modal-header text-danger'
+			document.getElementById('modal_btn').className = 'btn btn-danger'
+			document.getElementById('modal_btn').innerHTML = 'Voltar e corrigir'
 
-		$('#modalRegistraDespesa').modal('show')
+			$('#modalRegistraDespesa').modal('show')
+		}
 	}
 
 }
@@ -182,7 +195,7 @@ function carregaListaDespesas(despesas = Array(), filtro = false) {
 		btn.innerHTML = '<i class="fas fa-times"></i>'
 		btn.id = `id_despesa${d.id}`
 
-		
+
 		console.log(btn.id = d.id)
 		btn.onclick = function () {
 			let id = this.id.replace('id_despesa_', '')
