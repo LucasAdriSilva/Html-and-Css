@@ -44,7 +44,7 @@
                     <p>Idade:</p><input class="input" id="idade" type="number">
                 </div>
                 <div class="div1">
-                    <p>Altura:</p><input class="input" id="altura" type="number">
+                    <p>Altura:</p><input class="input" step="10" id="altura" type="number">
                 </div>
                 <div class="div1">
                     <p>Peso:</p><input class="input" id="peso" type="number">
@@ -56,23 +56,19 @@
                         <option value="Femea">Mulher</option>
                     </select>
                 </div>
+                <h3>Distribua seus 25 ponstos</h3>
                 <div class="div1">
-                    <p>Força:</p> <input id="strength" type="range" list="faixa" step="0.1"> 
-                    
-                    <datalist id="faixa">
-                        <option value="0" label="0 Pontos">
-                        <option value="10" label="1 Pontos">
-                        <option value="20" label="2 Pontos">
-                        <option value="30" label="3 Pontos">
-                        <option value="40" label="4 Pontos">
-                        <option value="50" label="5 Pontos">
-                        <option value="60" label="6 Pontos">
-                        <option value="70" label="7 Pontos">
-                        <option value="80" label="8 Pontos">
-                        <option value="90" label="9 Pontos">
-                        <option value="100" label="10 Pontos">
-                      </datalist>
-                      <span id="resStrenght"></span>
+                    <p>Força:</p> <input type="range" id="for" value="1" min="0" max="100" oninput="display1.value=value/10"  onchange="display1.value=value/10">
+
+                    <input class="resu" type="text" id="display1" value="0">
+                </div>
+                <div class="div1">
+                    <p>Inteligência:</p> <input type="range" id="inte" value="1" min="0" max="100" oninput="display2.value=value/10"  onchange="display2.value=value/10">
+                    <input class="resu" type="text" id="display2" value="0">
+                </div>
+                <div class="div1">
+                    <p>Agilidade:</p> <input type="range" id="agi" value="1" min="0" max="100" oninput="display3.value=value/10"  onchange="display3.value=value/10">
+                    <input class="resu" type="text" id="display3" value="0">
                 </div>
 
                 <div>
@@ -84,13 +80,13 @@
             <div>
                 <h1>Player Criado</h1>
             </div>
-            <div >
+            <div>
                 <p id="res1"></p>
             </div>
-            <div >
+            <div>
                 <p id="res2"></p>
             </div>
-            <div >
+            <div>
                 <p id="res2"></p>
             </div>
 

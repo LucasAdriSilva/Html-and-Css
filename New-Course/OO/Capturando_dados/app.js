@@ -1,12 +1,15 @@
 
 
 class Personagem {
-    constructor(nome, idade, sexo, altura, peso) {
+    constructor(nome, idade, sexo, altura, peso, forca, inteligencia, agilidade) {
         this.nome = nome
         this.idade = idade
         this.altura = altura
         this.peso = peso
         this.sexo = sexo
+        this.forca = forca
+        this.inteligencia = inteligencia
+        this.agilidade = agilidade
     }
 }
 
@@ -42,19 +45,24 @@ function enviarDados() {
     let altura = document.getElementById('altura')
     let peso = document.getElementById('peso')
     let sexo = document.getElementById('sexo')
+    let forca = document.getElementById('for')
+    let inteligencia = document.getElementById('inte')
+    let agilidade = document.getElementById('agi')
     //Salvando os dados do novo player no objeto
     let newPlayer = new Personagem(
         nome.value,
         idade.value,
         altura.value,
         peso.value,
-        sexo.value
+        sexo.value,
+        forca.value/10,
+        inteligencia.value/10,
+        agilidade.value/10
     )
 
     //Gravando o objeto no localstorage
     Bd.gravar(newPlayer)
     
-    mostrarDados(nome, idade, sexo, altura, peso)
 
     //Mostrando o dados do obj no conteudo secundario
     //Limpando campos
@@ -63,18 +71,11 @@ function enviarDados() {
     sexo.value = ''
     altura.value = ''
     peso.value = ''
-
-    
-    
+    forca.value = 0
+    inteligencia.value = 0
+    agilidade.value = 0
+  
 }
-
-// function mostrarDados(nome, idade, sexo, altura, peso){
-    
-// }
-
-
-
-
 
 
 
