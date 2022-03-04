@@ -38,16 +38,16 @@
                 <h3 class="center">Caracteriscas básicas</h3>
 
                 <div class="div1">
-                    <p>Nome:</p><input class="input" id="nome" type="text">
+                    <p>Nome:</p><input onblur="atualizacao()" class="input" id="nome" type="text">
                 </div>
                 <div class="div1">
-                    <p>Idade:</p><input class="input" id="idade" type="number">
+                    <p>Idade:</p><input onblur="atualizacao()" class="input" id="idade" type="number">
                 </div>
                 <div class="div1">
-                    <p>Altura:</p><input class="input" step="10" id="altura" type="number">
+                    <p>Altura:</p><input onblur="atualizacao()" class="input" step="10" id="altura" type="number">
                 </div>
                 <div class="div1">
-                    <p>Peso:</p><input class="input" id="peso" type="number">
+                    <p>Peso:</p><input onblur="atualizacao()" class="input" step="10" id="peso" type="number">
                 </div>
                 <div class="div1">
                     <p>Escolha seu</p><select id="sexo">
@@ -56,9 +56,9 @@
                         <option value="Femea">Mulher</option>
                     </select>
                 </div>
-                <h3>Distribua seus 25 ponstos</h3>
+                <h3 id="pont">Distribua seus 20 pontos</h3>
                 <div class="div1">
-                    <p>Força:</p> <input type="range" id="for" value="1" min="0" max="100" oninput="display1.value=value/10"  onchange="display1.value=value/10">
+                    <p>Força:</p> <input type="range" id="for" value="1" min="0" max="100" oninput="display1.value=value/10" onchange="display1.value=value/10">
 
                     <input class="resu" type="text" id="display1" value="0">
                 </div>
@@ -72,7 +72,7 @@
                 </div>
 
                 <div>
-                    <button onclick="enviarDados()" class="rend">Enviar</button>
+                    <button onclick="enviarDados()" class="rend" >Enviar </button>
                 </div>
             </div>
         </div>
