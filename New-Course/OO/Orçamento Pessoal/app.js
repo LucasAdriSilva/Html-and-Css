@@ -134,7 +134,7 @@ function cadastrarDespesa() {
 		valor.value = ''
 
 	} else {
-		
+
 		if (despesa.dia > 31) {
 			document.getElementById('modal_conteudo').innerHTML = 'Valor do campo DIA'
 			document.getElementById('modal_titulo').innerHTML = `Seu mês tem ${despesa.dia}??????? Então volta e arruma`

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sttyle.css">
+    <script src="app.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <header id="cabecario">
+        <div>
+            <ul id="menu">
+                <li>Cadastrar</li>
+                <li>Lista de pesonagens</li>
+                <li>Mapas</li>
+            </ul>
+        </div>
+
+        <div id="seach">
+
+        </div>
+    </header>
+    <main>
+        <div class="principal">
+            <div class="center1">
+                <h1>Criador de personagem</h1>
+                <button class="rend">Personagem Radom</button>
+
+            </div>
+
+            <div class="infos">
+
+                <h3 class="center">Caracteriscas básicas</h3>
+
+                <div class="div1">
+                    <p>Nome:</p><input class="input" id="nome" type="text">
+                </div>
+                <div class="div1">
+                    <p>Idade:</p><input class="input" id="idade" type="number">
+                </div>
+                <div class="div1">
+                    <p>Altura:</p><input class="input" id="altura" type="number">
+                </div>
+                <div class="div1">
+                    <p>Peso:</p><input class="input" id="peso" type="number">
+                </div>
+                <div class="div1">
+                    <p>Escolha seu</p><select id="sexo">
+                        <option value="">Sexo</option>
+                        <option value="Masculino">Homem</option>
+                        <option value="Femea">Mulher</option>
+                    </select>
+                </div>
+                <div class="div1">
+                    <p>Força:</p> <input id="strength" type="range" list="faixa" step="0.1"> 
+                    
+                    <datalist id="faixa">
+                        <option value="0" label="0 Pontos">
+                        <option value="10" label="1 Pontos">
+                        <option value="20" label="2 Pontos">
+                        <option value="30" label="3 Pontos">
+                        <option value="40" label="4 Pontos">
+                        <option value="50" label="5 Pontos">
+                        <option value="60" label="6 Pontos">
+                        <option value="70" label="7 Pontos">
+                        <option value="80" label="8 Pontos">
+                        <option value="90" label="9 Pontos">
+                        <option value="100" label="10 Pontos">
+                      </datalist>
+                      <span id="resStrenght"></span>
+                </div>
+
+                <div>
+                    <button onclick="enviarDados()" class="rend">Enviar</button>
+                </div>
+            </div>
+        </div>
+        <div id="conteudo_secundario">
+            <div>
+                <h1>Player Criado</h1>
+            </div>
+            <div >
+                <p id="res1"></p>
+            </div>
+            <div >
+                <p id="res2"></p>
+            </div>
+            <div >
+                <p id="res2"></p>
+            </div>
+
+        </div>
+    </main>
+</body>
+
+</html>
