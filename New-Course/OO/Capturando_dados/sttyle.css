@@ -62,16 +62,14 @@ li {
     background-color: rgb(121, 168, 255);
     padding: 100px;
 }
-.seletor{
-    margin-bottom: ;
-}
+
 .div1{
     display: flex;
     flex-direction: row;
     align-items: center;
     
     gap: 15px;
-    flex-wrap: ;
+    flex-wrap: 10px;
 }
 
 .center{
@@ -89,6 +87,13 @@ li {
     border: none;    
 }
 
+.rend1{
+    border-radius: 50px;
+    width: 80px;
+    height: 25px;
+    border: none;    
+}
+
 .infos {
     display: flex;
     flex-direction: column;
@@ -99,4 +104,9 @@ li {
     width: 20px;
     border: none;
     border-radius: 3px;
+}
+
+.center{
+    align-items: center;
+    margin-top: 20px;
 }
