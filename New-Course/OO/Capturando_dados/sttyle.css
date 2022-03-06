@@ -3,14 +3,23 @@ li {
     list-style-type: none;
   }
 
-  main{
+main{
     display: flex;
     flex-direction: row;
-    padding-top:  100px;
+    margin-top: 50px;
     justify-content: space-around;
 
 }
 
+body{
+    background-color: rgb(39, 39, 39);
+}
+
+
+
+.paragrafo{
+   padding: 20px; 
+}
 
 .input{
     width: 100px;
@@ -19,12 +28,19 @@ li {
     border: none;
 }
 
+#menu{
+    display: flex;
+    gap: 30px; 
+}
+
 #cabecario{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-
+    color: rgb(255, 255, 255);
+    padding: 10px 0px;
+    font-size: 1.5rem;
 }
 
 #menu{
@@ -49,18 +65,22 @@ li {
 
 #conteudo_secundario{
     padding: 100px;
-    width: 200px;
-    background-color: rgb(39, 39, 39);
-    color: aliceblue;
+    width: auto;
+    height: 500px;
+    background-color: rgb(168, 121, 255);
+    box-shadow: 7px 7px 7px rgb(135, 71, 255);
+
+    color: rgb(0, 0, 0);
     display: block;
     
 }
 
 .principal{
-    margin-top: 10px;
-    margin-left: 50px;
-    background-color: rgb(121, 168, 255);
+    background-color: rgb(168, 121, 255);
+    width: auto;
+    height: auto;
     padding: 100px;
+    box-shadow: 7px 7px 7px rgb(135, 71, 255);
 }
 
 .div1{
@@ -68,23 +88,29 @@ li {
     flex-direction: row;
     align-items: center;
     
-    gap: 15px;
+    gap: 10px;
     flex-wrap: 10px;
 }
 
 .center{
     text-align: center;
 }
+
 .center1{
     text-align: center;
     margin-bottom: 50px;
+    margin-top: 20px;
+}
+.center2{
+    text-align: center;
+    width: 400px;
 }
 
 .rend{
     border-radius: 50px;
     width: 150px;
     height: 40px;
-    border: none;    
+    border: none; 
 }
 
 .rend1{
@@ -106,7 +132,12 @@ li {
     border-radius: 3px;
 }
 
-.center{
-    align-items: center;
-    margin-top: 20px;
+.btn_menu{
+    width: 220px;
+    height: 35px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 2px 2px 10px rgb(135, 71, 255);
+    background-color: rgb(168, 121, 255);
+    border: 0.5px solid black;
 }

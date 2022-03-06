@@ -5,12 +5,12 @@ class Personagem {
         this.altura = altura / 100
         this.peso = peso
         this.sexo = sexo
-        this.forca = Math.round(forca)
-        this.inteligencia = Math.round(inteligencia)
-        this.agilidade = Math.round(agilidade)
+        this.forca = Math.round(parseInt(forca))
+        this.inteligencia = Math.round(parseInt(inteligencia))
+        this.agilidade = Math.round(parseInt(agilidade))
         this.somaAtt = forca + inteligencia + agilidade
         this.distribuicao = 20
-        
+
     }
     validarDados() {
         for (let i in this) {
@@ -22,6 +22,46 @@ class Personagem {
             return "Erro de dstribuição"
         }
         return true
+    }
+
+    verificacaoAtt(playerName, playerAtt, att, res) {
+        document.getElementById(res).innerHTML = `Olá ${playerName}, segue seus dados de jogador:`
+
+        switch (playerAtt) {
+            case 0:
+                document.getElementById(res).innerHTML = `Por sua ${att} ser ${playerAtt} você recebe -3 no dados para ações que necessitam de ${att}`
+                res
+            case 1:
+                document.getElementById(res).innerHTML = `Por sua ${att} ser ${playerAtt} você recebe -2 no dados para ações que necessitam de ${att}`
+                playerAtt
+            case 2:
+                document.getElementById(res).innerHTML = `Por sua ${att} ser ${playerAtt} você recebe -2 no dados para ações que necessitam de ${att}`
+                break;
+            case 3:
+                document.getElementById(res).innerHTML = `Por sua ${att} ser ${playerAtt} você recebe -1 no dados para ações que necessitam de ${att}`
+                break;
+            case 4:
+                document.getElementById(res).innerHTML = `Por sua ${att} ser ${playerAtt} você recebe -1 no dados para ações que necessitam de ${att}`
+                break;
+            case 5:
+                document.getElementById(res).innerHTML = `Por sua ${att} ser ${playerAtt} você recebe 0 no dados para ações que necessitam de ${att}`
+                break;
+            case 6:
+                document.getElementById(res).innerHTML = `Por sua ${att} ser ${playerAtt} você recebe +1 no dados para ações que necessitam de ${att}`
+                break;
+            case 7:
+                document.getElementById(res).innerHTML = `Por sua ${att} ser ${playerAtt} você recebe +1 no dados para ações que necessitam de ${att}`
+                break;
+            case 8:
+                document.getElementById(res).innerHTML = `Por sua ${att} ser ${playerAtt} você recebe +2 no dados para ações que necessitam de ${att}`
+                break;
+            case 9:
+                document.getElementById(res).innerHTML = `Por sua ${att} ser ${playerAtt} você recebe +2 no dados para ações que necessitam de ${att}`
+                break;
+            case 10:
+                document.getElementById(res).innerHTML = `Por sua ${att} ser ${playerAtt} você recebe +3 no dados para ações que necessitam de ${att}`
+                break;
+        }
     }
 }
 
@@ -100,106 +140,13 @@ function atualizacao() {
 }
 
 function mostrarDadosSecundarios(player) {
-    let p = player
+    document.getElementById('res1').innerHTML = `Olá ${player.nome}, iremos mostrar todos os dados do seu jogador`
 
-    document.getElementById('res1').innerHTML = `Olá ${p.nome}, segue seus dados de jogador:`
-    
-    let x = parseInt(p.forca)
-    switch (x){
-        case 0:
-        document.getElementById('res2').innerHTML = `Por sua força ser ${p.forca} você recebe -3 no dados para ações que necessitam de força`
-        break;
-        case 1:
-        document.getElementById('res2').innerHTML = `Por sua força ser ${p.forca} você recebe -2 no dados para ações que necessitam de força`
-        break;
-        case 2:
-        document.getElementById('res2').innerHTML = `Por sua força ser ${p.forca} você recebe -2 no dados para ações que necessitam de força`
-        break;
-        case 3:
-        document.getElementById('res2').innerHTML = `Por sua força ser ${p.forca} você recebe -1 no dados para ações que necessitam de força`
-        break;
-        case 4:
-        document.getElementById('res2').innerHTML = `Por sua força ser ${p.forca} você recebe -1 no dados para ações que necessitam de força`
-        break;
-        case 5:
-        document.getElementById('res2').innerHTML = `Por sua força ser ${p.forca} você recebe 0 no dados para ações que necessitam de força`
-        break;
-        case 6:
-        document.getElementById('res2').innerHTML = `Por sua força ser ${p.forca} você recebe +1 no dados para ações que necessitam de força`
-        break;
-        case 7:
-        document.getElementById('res2').innerHTML = `Por sua força ser ${p.forca} você recebe +1 no dados para ações que necessitam de força`
-        break;
-        case 8:
-        document.getElementById('res2').innerHTML = `Por sua força ser ${p.forca} você recebe +2 no dados para ações que necessitam de força`
-        break;
-        case 9:
-        document.getElementById('res2').innerHTML = `Por sua força ser ${p.forca} você recebe +2 no dados para ações que necessitam de força`
-        break;
-        case 10:
-        document.getElementById('res2').innerHTML = `Por sua força ser ${p.forca} você recebe +3 no dados para ações que necessitam de força`
-        break;
-    }
+    player.verificacaoAtt(player.nome, player.forca, 'Força', 'res2')
+    player.verificacaoAtt(player.name, player.inteligencia, 'Inteligência', 'res3')
+    player.verificacaoAtt(player.name, player.agilidade, 'Agilidade', 'res4')
 
-    switch (parseInt(p.inteligencia)){
-        case (p.inteligencia >= 0 && p.inteligencia <= 1):
-        document.getElementById('res2').innerHTML = `Por sua força ser ${p.forca} você recebe -2 no dados para ações que necessitam de inteligência`
-        break
-        case (p.inteligencia >= 1 && p.inteligencia <= 2):
-        document.getElementById('res2').innerHTML = `Por sua força ser ${p.inteligencia} você recebe -2 no dados para ações que necessitam de inteligência`
-        break
-        case (p.inteligencia >= 2 && p.inteligencia <= 3):
-        document.getElementById('res2').innerHTML = `Por sua força ser ${p.inteligencia} você recebe -1 no dados para ações que necessitam de inteligência`
-        break
-        case (p.inteligencia >= 3 && p.inteligencia <= 4):
-        document.getElementById('res2').innerHTML = `Por sua força ser ${p.inteligencia} você recebe -1 no dados para ações que necessitam de inteligência`
-        break
-        case (p.inteligencia >= 4 && p.inteligencia <= 5):
-        document.getElementById('res2').innerHTML = `Por sua força ser ${p.inteligencia} você recebe 0 no dados para ações que necessitam de inteligência`
-        break
-        case (p.inteligencia >= 5 && p.inteligencia <= 6):
-        document.getElementById('res2').innerHTML = `Por sua força ser ${p.inteligencia} você recebe +1 no dados para ações que necessitam de inteligência`
-        break
-        case (p.inteligencia >= 7 && p.inteligencia <= 8):
-        document.getElementById('res2').innerHTML = `Por sua força ser ${p.inteligencia} você recebe +1 no dados para ações que necessitam de inteligência`
-        break
-        case (p.inteligencia >= 8 && p.inteligencia <= 9):
-        document.getElementById('res2').innerHTML = `Por sua força ser ${p.forca} você recebe +2 no dados para ações que necessitam de inteligência`
-        break
-        case (p.inteligencia >= 9 && p.inteligencia <= 10):
-        document.getElementById('res2').innerHTML = `Por sua força ser ${p.inteligencia} você recebe +2 no dados para ações que necessitam de inteligência`
-        break
-    }
 
-    switch (parseInt(p.agilidade)){
-        case (p.agilidade >= 0 && p.agilidade <= 1):
-        document.getElementById('res2').innerHTML = `Por sua força ser ${p.forca} você recebe -2 no dados para ações que necessitam de agilidade`
-        break
-        case (p.agilidade >= 1 && p.agilidade <= 2):
-        document.getElementById('res2').innerHTML = `Por sua força ser ${p.agilidade} você recebe -2 no dados para ações que necessitam de agilidade`
-        break
-        case (p.agilidade >= 2 && p.agilidade <= 3):
-        document.getElementById('res2').innerHTML = `Por sua força ser ${p.agilidade} você recebe -1 no dados para ações que necessitam de agilidade`
-        break
-        case (p.agilidade >= 3 && p.agilidade <= 4):
-        document.getElementById('res2').innerHTML = `Por sua força ser ${p.agilidade} você recebe -1 no dados para ações que necessitam de agilidade`
-        break
-        case (p.agilidade >= 4 && p.agilidade <= 5):
-        document.getElementById('res2').innerHTML = `Por sua força ser ${p.agilidade} você recebe 0 no dados para ações que necessitam de agilidade`
-        break
-        case (p.agilidade >= 5 && p.agilidade <= 6):
-        document.getElementById('res2').innerHTML = `Por sua força ser ${p.agilidade} você recebe +1 no dados para ações que necessitam de agilidade`
-        break
-        case (p.agilidade >= 7 && p.agilidade <= 8):
-        document.getElementById('res2').innerHTML = `Por sua força ser ${p.agilidade} você recebe +1 no dados para ações que necessitam de agilidade`
-        break
-        case (p.agilidade >= 8 && p.agilidade <= 9):
-        document.getElementById('res2').innerHTML = `Por sua força ser ${p.forca} você recebe +2 no dados para ações que necessitam de agilidade`
-        break
-        case (p.agilidade >= 9 && p.agilidade <= 10):
-        document.getElementById('res2').innerHTML = `Por sua força ser ${p.agilidade} você recebe +2 no dados para ações que necessitam de agilidade`
-        break
-    }
 }
 
 function enviarDados() {
@@ -229,4 +176,5 @@ function enviarDados() {
         newPlayer.agilidade.value = 0
     }
 }
+
 

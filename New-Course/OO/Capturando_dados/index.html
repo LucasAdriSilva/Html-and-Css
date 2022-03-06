@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="sttyle.css">
     <script src="app.js"></script>
+    <script src="NomeAleatorio.js"></script>
 
     <title>Document</title>
 </head>
@@ -15,9 +17,10 @@
     <header id="cabecario">
         <div>
             <ul id="menu">
-                <li>Cadastrar</li>
-                <li>Lista de pesonagens</li>
-                <li>Mapas</li>
+                <li><button class="btn_menu">Jogar</button></li>
+                <li><button class="btn_menu">Cadastrar</button></li>
+                <li><button class="btn_menu">Lista de pesonagens</button></li>
+                <li><button class="btn_menu">Mapas</button></li>
             </ul>
         </div>
 
@@ -27,27 +30,27 @@
     </header>
     <main>
         <div class="principal">
-            <div class="center1">
+            <div class="center2">
                 <h1>Criador de personagem</h1>
-                <button class="rend">Personagem Radom</button>
-
+                <button onclick="nomeAleatorio()" class="rend">Personagem Radom</button>
             </div>
+            
 
             <div class="infos">
 
                 <h3 class="center">Caracteriscas básicas</h3>
 
                 <div class="div1">
-                    <p>Nome:</p><input onblur="atualizacao()" class="input" id="nome" type="text">
+                    <p>Nome:</p><input  class="input" id="nome" type="text">
                 </div>
                 <div class="div1">
                     <p>Idade:</p><input onblur="atualizacao()" class="input" id="idade" type="number">
                 </div>
                 <div class="div1">
-                    <p>Altura:</p><input onblur="atualizacao()" class="input" step="10" id="altura" type="number">
+                    <p>Altura:</p><input  class="input" step="10" id="altura" type="number"><p class="unidade">cm</p>
                 </div>
                 <div class="div1">
-                    <p>Peso:</p><input onblur="atualizacao()" class="input" step="10" id="peso" type="number">
+                    <p>Peso:</p><input  class="input" step="10" id="peso" type="number"><p>Kg</p>
                 </div>
                 <div class="div1">
                     <p>Escolha seu</p><select id="sexo">
@@ -73,22 +76,27 @@
 
                 
             </div>
-            <div class="center">
+            <div class="center1">
                 <button onclick="enviarDados()" class="rend1" >Enviar </button>
             </div>
         </div>
+
+        
         <div id="conteudo_secundario">
-            <div>
-                <h1>Player Criado</h1>
+            <div class="center2">
+                <h1 class="center">Player Criado</h1>
             </div>
             <div>
-                <p id="res1">testes</p>
+                <p id="res1" class="paragrafo"></p>
             </div>
             <div>
-                <p id="res2"></p>
+                <p id="res2" class="paragrafo"></p>
             </div>
             <div>
-                <p id="res3"></p>
+                <p id="res3" class="paragrafo"></p>
+            </div>
+            <div>
+                <p id="res4" class="paragrafo"></p>
             </div>
 
         </div>
