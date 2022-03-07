@@ -1,12 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="sttyle.css">
+    <script src="app.js"></script>
+    <script src="NomeAleatorio.js"></script>
+    <script src="Maps.js"></script>
+
+    <title>Maps</title>
 </head>
+
 <body>
-    
+    <header id="cabecario">
+        <div>
+            <ul id="menu">
+
+                <li><a href="mapa.html" class="btn_menu"> Jogar</a> </li>
+                <li><a href="mapa.html" class="btn_menu"> Cadastrar</a> </li>
+                <li><a href="mapa.html" class="btn_menu"> Lista de pesonagens</a> </li>
+                <li><a href="mapa.html" class="btn_menu"> Mapas</a> </li>
+                <!-- <li><button class="btn_menu">Mapas</button></li> -->
+            </ul>
+        </div>
+
+        <div id="seach">
+
+        </div>
+    </header>
+    <main class="mainn">
+        <h3 style="color: white">Escolha seu Mapa</h3>
+        <div class="botoes">
+            <div><button onclick="creatMedieval()" class="btn_menus">Mapa Mediavel</button></div>
+            <div><button onclick="creatModernol()" class="btn_menus">Mapa Moderno</button></div>
+        </div>
+        <div id="creat_maps">
+            
+        </div> 
+    </main>
 </body>
+
 </html>

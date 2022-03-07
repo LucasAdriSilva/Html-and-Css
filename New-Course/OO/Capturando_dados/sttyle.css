@@ -3,12 +3,15 @@ li {
     list-style-type: none;
   }
 
+a{
+    text-decoration: none;
+}
+
 main{
     display: flex;
     flex-direction: row;
     margin-top: 50px;
-    justify-content: space-around;
-
+    justify-content: center;
 }
 
 body{
@@ -60,27 +63,33 @@ body{
 #conteudo_principal{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-around;   
 }
 
 #conteudo_secundario{
     padding: 100px;
-    width: auto;
+    width: 400px;
     height: 500px;
-    background-color: rgb(168, 121, 255);
-    box-shadow: 7px 7px 7px rgb(135, 71, 255);
-
-    color: rgb(0, 0, 0);
+    /* background-color: rgb(200, 170, 115); */
+    background-image: url(assets/pergaminho2.png);
+    background-size: 900px;
+    background-repeat: no-repeat;
+    background-size: auto;
+    gap: 10px;
+    /* box-shadow: 7px 7px 7px rgb(135, 71, 255); */
+    color: rgb(66, 66, 66);
     display: block;
     
 }
 
 .principal{
-    background-color: rgb(168, 121, 255);
+    /* background-color: rgb(200, 170, 115); */
+    background-image: url(assets/pergaminho.png);
     width: auto;
     height: auto;
     padding: 100px;
-    box-shadow: 7px 7px 7px rgb(135, 71, 255);
+    /* box-shadow: 7px 7px 7px rgb(135, 71, 255); */
+    color: rgb(66, 66, 66);
 }
 
 .div1{
@@ -99,7 +108,7 @@ body{
 .center1{
     text-align: center;
     margin-bottom: 50px;
-    margin-top: 20px;
+    margin-top: 5px;
 }
 .center2{
     text-align: center;
@@ -137,7 +146,41 @@ body{
     height: 35px;
     border-radius: 20px;
     border: none;
-    box-shadow: 2px 2px 10px rgb(135, 71, 255);
-    background-color: rgb(168, 121, 255);
+    /* box-shadow: 2px 2px 10px rgb(253, 253, 253); */
+    background-color: rgb(200, 170, 115);
     border: 0.5px solid black;
+    padding: 10px 10px;
+    color: rgb(66, 66, 66);
+}
+
+.btn_menus{
+    width: 110px;
+    height: 60px;
+    border-radius: 20px;
+    border: none;
+    /* box-shadow: 2px 2px 10px rgb(253, 253, 253); */
+    background-color: rgb(200, 170, 115);
+    border: 0.5px solid black;
+    padding: 10px 5px;
+    color: rgb(66, 66, 66);
+}
+
+.botoes{
+    display: flex;
+    gap: 60px;
+    /* text-align: center; */
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.mainn{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    justify-content: space-around;
+    text-align: center;
+}
+
+#res1, #res2, #res3, #res4{
+    color: rgb(66, 66, 66);
 }
