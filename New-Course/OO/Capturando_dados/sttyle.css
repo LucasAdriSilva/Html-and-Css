@@ -184,3 +184,16 @@ body{
 #res1, #res2, #res3, #res4{
     color: rgb(66, 66, 66);
 }
+
+#creat_maps{
+    width: 500;
+    height: 500;
+    border: 1px solid white;
+}
+.creat_maps{
+    background-image: url(assets/pergaminho.png);
+    width: auto;
+    height: 1500px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
